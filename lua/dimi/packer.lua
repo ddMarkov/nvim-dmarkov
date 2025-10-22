@@ -4,7 +4,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use {
-	  'nvim-telescope/telescope.nvim', tag = '1.1.8',
+	  'nvim-telescope/telescope.nvim', 
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
@@ -36,11 +36,24 @@ return require('packer').startup(function(use)
   use "hrsh7th/vim-vsnip"         -- snippet engine
 
   use {
-      "windwp/nvim-autopairs",
-      event = "InsertEnter",
-  }
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+        require("nvim-autopairs").setup {}
+    end
+}
 
   use { "akinsho/toggleterm.nvim", tag = '*', config = function () 
     require("toggleterm").setup()
   end}
+use {
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "MunifTanjim/nui.nvim",
+    "nvim-tree/nvim-web-devicons",
+  },
+}
+
 end)
