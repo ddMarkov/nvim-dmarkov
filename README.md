@@ -8,20 +8,6 @@ Built around first-principles simplicity, modular Lua structure, and IDE-like er
 - Same shortcuts across terminal, editor, and REPL
 - Git & LSP integrated as first-class citizens
 
-.config/nvim/
-├── init.lua               → loads plugins, settings, keymaps
-├── lua/
-│   └── dmarkov/
-│       ├── plugins.lua    → Packer plugin definitions
-│       ├── keymaps.lua    → global keymaps
-│       ├── settings.lua   → vim options
-│       └── utils.lua      → helper functions
-└── after/
-    └── plugin/
-        ├── toggleterm.lua → terminal config
-        ├── neo-tree.lua   → file explorer config
-        └── telescope.lua  → search config
-
 ## 🔌 Key Plugins & Their Role
 
 | Plugin | Purpose |
