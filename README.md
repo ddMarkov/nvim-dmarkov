@@ -36,3 +36,21 @@ Built around first-principles simplicity, modular Lua structure, and IDE-like er
 - Kitty terminal (might work with others too but Kitty is a satisfying option especially on Mac)
 - Neovim 0.10.x
 - Nerd Font: JetBrainsMono Nerd Font Mono
+
+## 🧠 LSP Setup
+
+This Neovim config uses **[mason.nvim](https://github.com/williamboman/mason.nvim)** and **[mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)** to manage and configure Language Servers.
+
+### Installed Language Servers
+| Language | LSP Server | Notes |
+|-----------|-------------|--------|
+| **Lua** | `lua-language-server` | Used for Neovim config and plugin development |
+| **Python** | `basedpyright` | Lightweight, modern alternative to Pyright |
+| *(Optional)* TypeScript | `typescript-language-server` | For JS/TS projects |
+
+### ⚙️ Setup Notes
+- LSP servers **must be installed via Mason**, not manually.  
+- To install missing servers:
+  ```vim
+  :MasonInstall lua-language-server basedpyright typescript-language-server
+
