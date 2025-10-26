@@ -5,6 +5,12 @@ require("neo-tree").setup({
   clipboard = {
     sync = "none", -- or "global"/"universal" to share a clipboard for each/all Neovim instance(s), respectively
   },
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
+  update_focused_file = {
+      enable = true,
+      update_root = true
+  },
   enable_git_status = true,
   enable_diagnostics = true,
   open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes

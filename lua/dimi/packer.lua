@@ -43,9 +43,8 @@ return require('packer').startup(function(use)
     end
 }
 
-  use { "akinsho/toggleterm.nvim", tag = '*', config = function () 
-    require("toggleterm").setup()
-  end}
+  use { "akinsho/toggleterm.nvim", tag = '*'}
+
 use {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
@@ -54,6 +53,16 @@ use {
     "MunifTanjim/nui.nvim",
     "nvim-tree/nvim-web-devicons",
   },
+}
+use {
+  "ahmedkhalf/project.nvim",
+  config = function()
+    require("project_nvim").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
 }
 
 end)
