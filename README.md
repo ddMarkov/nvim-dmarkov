@@ -31,3 +31,8 @@ Built around first-principles simplicity, modular Lua structure, and IDE-like er
 1. Add it to `lua/dimi/packer.lua`
 2. Run `:PackerSync`
 3. Create `after/plugin/<name>.lua` for setup
+
+## System Info
+- Kitty terminal (might work with others too but Kitty is a satisfying option especially on Mac)
+- Neovim 0.10.x
+- Nerd Font: JetBrainsMono Nerd Font Mono
