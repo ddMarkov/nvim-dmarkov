@@ -64,5 +64,7 @@ use {
     }
   end
 }
-
+use {
+    "folke/which-key.nvim"
+}
 end)

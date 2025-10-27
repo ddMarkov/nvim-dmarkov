@@ -19,6 +19,6 @@ vim.lsp.config["basedpyright"] = {
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("basedpyright")
-vim.lsp.enable("typerscirpt-language-server")
+vim.lsp.enable("typescirpt-language-server")
 vim.cmd("colorscheme catppuccin")
 

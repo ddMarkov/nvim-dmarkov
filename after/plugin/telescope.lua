@@ -1,10 +1,10 @@
 require('telescope').load_extension('projects')
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+local tb = require('telescope.builtin')
+vim.keymap.set('n', '<leader>pf', tb.find_files, { desc = 'Find files' })
+vim.keymap.set('n', '<C-p>',     tb.git_files,   { desc = 'Git files' })
 vim.keymap.set('n', '<leader>ps', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ")});
-end)
+  tb.grep_string({ search = vim.fn.input("Grep > ") })
+end, { desc = 'Grep string' })
 vim.keymap.set('n', '<leader>op', function()
-    require'telescope'.extensions.projects.projects{}
-end)
+  require('telescope').extensions.projects.projects({})
+end, { desc = 'Projects picker' })
