@@ -2,8 +2,13 @@ local ok, wk = pcall(require, "which-key")
 if not ok then return end
 
 wk.setup({
-  window = { border = "rounded", padding = {1,2} },
-  key_labels = { ["<leader>"]="SPC", ["<cr>"]="RET", ["<tab>"]="TAB" },
+  win = { border = "rounded", padding = {1, 2} },
+  icons = {
+    breadcrumb = "»", -- optional
+    separator = "➜", -- optional
+    group = "+",     -- optional
+    replace = { ["<leader>"] = "SPC", ["<cr>"] = "RET", ["<tab>"] = "TAB" }
+  },
 })
 
 wk.add({
