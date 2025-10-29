@@ -14,4 +14,4 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit window" })
 vim.keymap.set("n", "<leader>Q", ":qa<CR>", { desc = "Quit all" })
 
 -- PackerSync shortcut
-vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>", { desc = "Packer Sync" })
+vim.keymap.set("n", "<leader>pS", ":PackerSync<CR>", { desc = "Packer Sync" })
